@@ -161,5 +161,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 For details on user IDs, see the [overview page](whiteboard.md).
 
 ## RELATED LINKS
-
-## RELATED LINKS
