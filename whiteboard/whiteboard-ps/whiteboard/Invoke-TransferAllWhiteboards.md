@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.Whiteboard.PowerShell.Custom.dll-Help.xml
-Module Name: MicrosoftWhiteboard
 applicable: Microsoft Whiteboard
-title: Set-WhiteboardOwner
-online version: 
+external help file: WhiteboardAdmin-help.xml
+Module Name: WhiteboardAdmin
+online version:
 schema: 2.0.0
+title: Set-WhiteboardOwner
 ---
 
 # Invoke-TransferAllWhiteboards
@@ -15,8 +15,9 @@ Transfer ownership of all Whiteboards owned by a user to another user.
 
 ## SYNTAX
 
-```powershell
-Invoke-TransferAllWhiteboards [[-Token] <AuthenticationResult>] [-OwnerId] <Guid> [-NewOwnerId] <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+Invoke-TransferAllWhiteboards [[-Token] <AuthenticationResult>] [-OldOwnerId] <Guid> [-NewOwnerId] <Guid>
+ [-ForceAuthPrompt] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +26,7 @@ Transfer ownership of all Whiteboards owned by a user to another user.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 
 ```
 PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002 -WhatIf
@@ -33,14 +34,13 @@ PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-0000000
 
 Check how many Whiteboards will be transferred without transferring them.
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 
 ```
 PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
 ```
 
 Transfer (and prompt before performing any write actions).
-
 
 ## PARAMETERS
 
@@ -49,13 +49,15 @@ Transfer (and prompt before performing any write actions).
 The Azure AD bearer token corresponding to the specified credentials. If unspecified, a new token will be generated.
 
 ```yaml
-Type:                        Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationResult
-Required:                    false
-Position:                    1
-Default value:               None               
-Accept pipeline input:       false
-Accept wildcard characters:  false
-Applicable: Microsoft Whiteboard
+Type: AuthenticationResult
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -OldOwnerId
@@ -63,13 +65,15 @@ Applicable: Microsoft Whiteboard
 The ID of the previous owner.
 
 ```yaml
-Type:                        Guid
-Required:                    true
-Position:                    3
-Default value:               None
-Accept pipeline input:       false
-Accept wildcard characters:  false
-Applicable: Microsoft Whiteboard
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -NewOwnerId
@@ -77,13 +81,15 @@ Applicable: Microsoft Whiteboard
 The ID of the new owner.
 
 ```yaml
-Type:                        Guid
-Required:                    true
-Position:                    4
-Default value:               None
-Accept pipeline input:       false
-Accept wildcard characters:  false
-Applicable: Microsoft Whiteboard
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ForceAuthPrompt
@@ -91,38 +97,48 @@ Applicable: Microsoft Whiteboard
 Optional. Always prompt for auth. Use to ignore cached credentials.
 
 ```yaml
-Type:                        SwitchParameter
-Required:                    false
-Position:                    named
-Default value:               false       
-Accept pipeline input:       false
-Accept wildcard characters:  false
-Applicable: Microsoft Whiteboard
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: false
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -WhatIf
 
 ```yaml
-Type:                        SwitchParameter
-Required:                    false
-Position:                    named
-Default value:               None
-Accept pipeline input:       false
-Accept wildcard characters:  false
-Applicable: Microsoft Whiteboard
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Confirm [<SwitchParameter>]
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type:                        SwitchParameter
-Required:                    false
-Position:                    named
-Default value:               None
-Accept pipeline input:       false
-Accept wildcard characters:  false
-Applicable: Microsoft Whiteboard
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
