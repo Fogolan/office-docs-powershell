@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.Whiteboard.PowerShell.Custom.dll-Help.xml
-Module Name: MicrosoftWhiteboard
 applicable: Microsoft Whiteboard
-title: Get-Whiteboard
-online version: 
+external help file: WhiteboardAdmin-help.xml
+Module Name: WhiteboardAdmin
+online version:
 schema: 2.0.0
+title: Get-Whiteboard
 ---
 
 # Get-Whiteboard
@@ -15,16 +15,15 @@ Gets one or more Whiteboards from the Microsoft Whiteboard service and returns t
 
 ## SYNTAX
 
-### Get a specific Whiteboard
-
-```powershell
-Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> -WhiteboardId <Guid> [<CommonParameters>]
+### SingleWhiteboard
+```
+Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> -WhiteboardId <Guid> [-ForceAuthPrompt]
+ [<CommonParameters>]
 ```
 
-### Get all Whiteboards for a user
-
-```powershell
-Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> [<CommonParameters>]
+### ForUser
+```
+Get-Whiteboard [-Token <AuthenticationResult>] -UserId <Guid> [-ForceAuthPrompt] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,7 +32,7 @@ Gets one or more Whiteboards from the Microsoft Whiteboard service and returns t
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 
 ```
 PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
@@ -41,33 +40,36 @@ PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
 
 Get all of a user's Whiteboards.
 
-
 ## PARAMETERS
 
 ### -Token
 The Azure AD bearer token corresponding to the specified credentials. If unspecified, a new token will be generated.
 
 ```yaml
-Type:                        Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationResult
-Required:                    false
-Position:                    named
-Default value:               None               
-Accept pipeline input:       false
-Accept wildcard characters:  false
-Applicable: Microsoft Whiteboard
+Type: AuthenticationResult
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -UserId
 Optional. The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned. 
 
 ```yaml
-Type:                        Guid
-Required:                    true
-Position:                    named
-Default value:               None
-Accept pipeline input:       false
-Accept wildcard characters:  false
-Applicable: Microsoft Whiteboard
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -WhiteboardId
@@ -75,13 +77,15 @@ Applicable: Microsoft Whiteboard
 Optional. The ID of a specific Whiteboard.
 
 ```yaml
-Type:                        Guid
-Required:                    true
-Position:                    named
-Default value:               None       
-Accept pipeline input:       false
-Accept wildcard characters:  false
-Applicable: Microsoft Whiteboard
+Type: Guid
+Parameter Sets: SingleWhiteboard
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ForceAuthPrompt
@@ -89,14 +93,19 @@ Applicable: Microsoft Whiteboard
 Optional. Always prompt for auth. Use to ignore cached credentials.
 
 ```yaml
-Type:                        SwitchParameter
-Required:                    false
-Position:                    named
-Default value:               false       
-Accept pipeline input:       false
-Accept wildcard characters:  false
-Applicable: Microsoft Whiteboard
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: false
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -109,5 +118,7 @@ Applicable: Microsoft Whiteboard
 ## NOTES
 
 For details on user IDs, see the [overview page](whiteboard.md).
+
+## RELATED LINKS
 
 ## RELATED LINKS
