@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
-Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
 applicable: Microsoft StaffHub
-title: Import-StaffHubMember
-online version: 
+external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+Module Name: MicrosoftStaffHub
+online version:
 schema: 2.0.0
+title: Import-StaffHubMember
 ---
 
 # Import-StaffHubMember
@@ -17,7 +17,7 @@ Note: This cmdlet is currently in Beta.
 ## SYNTAX
 
 ```
-Import-StaffHubMember [-Path] <String> [[-Encoding] <String>]
+Import-StaffHubMember [-Path] <String> [[-Encoding] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +29,7 @@ Failure in adding one member does not stop the other members from getting added.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Import-StaffHubMember -Path "C:\member.txt"
 ```
@@ -45,8 +45,8 @@ https://msdn.microsoft.com/en-us/library/system.text.encoding(v=vs.110).aspx - E
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft StaffHub
+Aliases:
+
 Required: False
 Position: 1
 Default value: None
@@ -60,14 +60,17 @@ Location of the file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft StaffHub
+Aliases:
+
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
-Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
 applicable: Microsoft StaffHub
-title: Get-StaffHubMember
-online version: 
+external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+Module Name: MicrosoftStaffHub
+online version:
 schema: 2.0.0
+title: Get-StaffHubMember
 ---
 
 # Get-StaffHubMember
@@ -17,7 +17,7 @@ Note: This cmdlet is currently in Beta.
 ## SYNTAX
 
 ```
-Get-StaffHubMember [-TeamId] <String> [[-MemberId] <String>]
+Get-StaffHubMember [-TeamId] <String> [[-MemberId] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,8 +47,8 @@ MemberId for the specified member in the team.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft StaffHub
+Aliases:
+
 Required: False
 Position: 1
 Default value: None
@@ -62,14 +62,17 @@ TeamId for which all the members are to be fetched.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft StaffHub
+Aliases:
+
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

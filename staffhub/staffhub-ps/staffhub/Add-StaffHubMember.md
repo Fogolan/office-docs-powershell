@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
-Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
 applicable: Microsoft StaffHub
-title: Add-StaffHubMember
-online version: 
+external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+Module Name: MicrosoftStaffHub
+online version:
 schema: 2.0.0
+title: Add-StaffHubMember
 ---
 
 # Add-StaffHubMember
@@ -18,7 +18,7 @@ Note: This cmdlet currently is in Beta.
 
 ```
 Add-StaffHubMember [-TeamId] <String> [-FirstName] <String> [-LastName] <String> [[-Email] <String>]
- [[-PhoneNumber] <String>] [-IsManager] <Boolean>
+ [[-PhoneNumber] <String>] [-IsManager] <Boolean> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,7 +26,7 @@ Adds a member or manager to the specified team.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Add-StaffHubMember -TeamId "TEAM_1234" -FirstName "Abc" -LastName "123" -Email "abc@contoso.com" -IsManager $false
 ```
@@ -42,7 +42,6 @@ Office 365 email of the member to be added.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
 
 Required: False
 Position: 3
@@ -58,7 +57,6 @@ First name of the member to be added.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
 
 Required: True
 Position: 1
@@ -74,7 +72,6 @@ Should the person be added as a manager.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
 
 Required: True
 Position: 5
@@ -90,7 +87,6 @@ Last name of the member to be added.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
 
 Required: True
 Position: 2
@@ -106,7 +102,6 @@ Phone number of the member to be added.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
 
 Required: False
 Position: 4
@@ -122,7 +117,6 @@ ID of the team to which the member is to be added.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
 
 Required: True
 Position: 0
@@ -130,6 +124,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

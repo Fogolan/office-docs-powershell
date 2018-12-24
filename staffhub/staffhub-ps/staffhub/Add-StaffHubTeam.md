@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
-Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
 applicable: Microsoft StaffHub
-title: Add-StaffHubTeam
-online version: 
+external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+Module Name: MicrosoftStaffHub
+online version:
 schema: 2.0.0
+title: Add-StaffHubTeam
 ---
 
 # Add-StaffHubTeam
@@ -17,7 +17,7 @@ Note: This cmdlet is currently in Beta.
 ## SYNTAX
 
 ```
-Add-StaffHubTeam [-Name] <String> [-TimeZone] <String> [[-ManagerEmail] <String>]
+Add-StaffHubTeam [-Name] <String> [-TimeZone] <String> [[-ManagerEmail] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,14 +25,14 @@ Creates a team.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Add-StaffHubTeam -Name "TeamFromCmdletTest" -TimeZone "Asia/Calcutta" -ManagerEmail "abc@contoso.com"
 ```
 
 Creates a team with abc@contoso.com as manager.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Add-StaffHubTeam -Name "TeamFromCmdletTest" -TimeZone "Asia/Calcutta"
 ```
@@ -47,8 +47,8 @@ Organizational email of the member who should be the manager of the team. If not
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft StaffHub
+Aliases:
+
 Required: False
 Position: 2
 Default value: None
@@ -62,8 +62,8 @@ Name of the team to be created.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft StaffHub
+Aliases:
+
 Required: True
 Position: 0
 Default value: None
@@ -78,14 +78,17 @@ Reference: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft StaffHub
+Aliases:
+
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

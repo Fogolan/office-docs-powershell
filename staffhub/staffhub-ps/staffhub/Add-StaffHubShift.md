@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
-Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
 applicable: Microsoft StaffHub
-title: Add-StaffHubShift
-online version: 
+external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+Module Name: MicrosoftStaffHub
+online version:
 schema: 2.0.0
+title: Add-StaffHubShift
 ---
 
 # Add-StaffHubShift
@@ -17,8 +17,8 @@ Note: This cmdlet is currently in Beta.
 ## SYNTAX
 
 ```
-Add-StaffHubShift [-Title] <String> [[-Notes] <String>] [-StartDateTime] <DateTime> [-EndDateTime] <DateTime>
- [-ShiftType] <String> [-MemberId] <String> [-TeamId] <String>
+Add-StaffHubShift [[-Title] <String>] [[-Notes] <String>] [-StartDateTime] <DateTime> [-EndDateTime] <DateTime>
+ [-ShiftType] <String> [-MemberId] <String> [-TeamId] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,7 +26,7 @@ Adds a shift to the specified member in a team.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 $startTime = Get-Date -Date "2018-01-01T00:10:00"
 $endTime = Get-Date -Date "2018-01-01T04:10:00"
@@ -44,7 +44,7 @@ End time of the shift.
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
+
 Required: True
 Position: 5
 Default value: None
@@ -59,7 +59,7 @@ Member to which the shift is to be added.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
+
 Required: True
 Position: 1
 Default value: None
@@ -74,7 +74,7 @@ Additional notes for the shift.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
+
 Required: False
 Position: 3
 Default value: None
@@ -89,8 +89,8 @@ ShiftType - Working/Absence.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
 Accepted values: Working, Absence
+
 Required: True
 Position: 6
 Default value: None
@@ -105,7 +105,7 @@ Start time of the shift.
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
+
 Required: True
 Position: 4
 Default value: None
@@ -120,7 +120,7 @@ ID of the team to which the shift is to be added.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
+
 Required: True
 Position: 0
 Default value: None
@@ -135,13 +135,16 @@ Title of the shift.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft StaffHub
+
 Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

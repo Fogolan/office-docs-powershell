@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
-Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
 applicable: Microsoft StaffHub
-title: Remove-StaffHubMember
-online version: 
+external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+Module Name: MicrosoftStaffHub
+online version:
 schema: 2.0.0
+title: Remove-StaffHubMember
 ---
 
 # Remove-StaffHubMember
@@ -18,6 +18,7 @@ Note: This cmdlet is currently in Beta.
 
 ```
 Remove-StaffHubMember [-TeamId] <String> [[-MemberId] <String>] [[-MemberObject] <PSObject>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +26,7 @@ Removes the specified member from the team.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Remove-StaffHubMember -TeamId "TEAM_1234" -MemberId "MBER_1234"
 ```
@@ -40,8 +41,8 @@ MemberId of the member to be removed.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft StaffHub
+Aliases:
+
 Required: False
 Position: 1
 Default value: None
@@ -55,8 +56,8 @@ Entire member object returned from `Get-StaffHubMember`.
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft StaffHub
+Aliases:
+
 Required: False
 Position: 2
 Default value: None
@@ -70,14 +71,17 @@ TeamId from which the specified member is to be removed.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft StaffHub
+Aliases:
+
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

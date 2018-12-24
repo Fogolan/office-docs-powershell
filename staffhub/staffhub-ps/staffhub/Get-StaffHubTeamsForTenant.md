@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
-Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
 applicable: Microsoft StaffHub
-title: Get-StaffHubTeamsForTenant
-online version: 
+external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
+Module Name: MicrosoftStaffHub
+online version:
 schema: 2.0.0
+title: Get-StaffHubTeamsForTenant
 ---
 
 # Get-StaffHubTeamsForTenant
@@ -17,7 +17,7 @@ Note: This cmdlet is currently in Beta.
 ## SYNTAX
 
 ```
-Get-StaffHubTeamsForTenant [[-ContinuationToken] <String>] [[-Top] <Int32>]
+Get-StaffHubTeamsForTenant [[-ContinuationToken] <String>] [[-Top] <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +27,7 @@ So the next call can be made like Get-StaffHubTeamsForTenant -Top 10 -Continuati
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-StaffHubTeamsForTenant -Top 10
 ```
@@ -37,7 +37,7 @@ If 'Top' parameter is not specified, then it defaults it to 1000.
 This returns a continuation token stored in $nextToken variable which can be used by the following call.
 Eg: Get-StaffHubTeamsForTenant -Top 10 -ContinuationToken $nextToken.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-StaffHubTeamsForTenant
 ```
@@ -52,8 +52,8 @@ Continuation Token returned by the previous call.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft StaffHub
+Aliases:
+
 Required: False
 Position: 1
 Default value: None
@@ -67,14 +67,17 @@ Top 'n' items to be fetched sorted by ascending creation time order.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft StaffHub
+Aliases:
+
 Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
